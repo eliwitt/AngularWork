@@ -1,0 +1,28 @@
+<html ng-app="myApp">
+<head>
+  <title>Your Shopping Cart</title>
+</head>
+<body ng-controller="CartController">
+    <h1>Your Shopping Cart</h1>
+    <form name="myForm">
+        <div ng-repeat='item in items'>
+            <span>{{item.title}}</span>
+            <input ng-model='item.quantity'>
+            <span>{{item.price | currency}}</span>
+            <span>{{item.price * item.quantity | currency}}</span>
+            <button ng-click="remove($index)">Remove</button>
+        </div>
+        <div>
+            <p>
+                Product name: <input type="text" ng-model="title" /><br />
+                quantity: <input type="text" name="quantity" ng-model="quantity" to-numeric /><span style="color: red" ng-show="myForm.quantity.$error.ValNum">Quantity not numeric!</span><br />
+                price: <input type="text" name="price" ng-model="price" to-numeric /><span style="color: red" ng-show="myForm.price.$error.ValNum">Price not numeric!</span><br />
+                <button ng-click="add()" ng-disabled="myForm.$invalid">Add</button>
+            </p>
+        </div>
+    </form>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html   lang="en" ng-app="guthub">
+<head>
+  <title>GutHub - Create and Share</title>
+    <script src="scripts/vendor/angular.min.js"></script>
+    <script src="scripts/vendor/angular-resource.min.js"></script>
+    <script src="scripts/directives/directives.js"></script>
+    <script src="scripts/services/services.js"></script>
+    <script src="scripts/controllers/controllers.js"></script>
+    <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href="styles/guthub.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>GutHub</h1>
+  </header>
+
+  <div butterbar>Loading...</div>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span2">
+        <!--Sidebar-->
+        <div id="focus"><a href="#/new">New Recipe</a></div>
+        <div><a href="#/">Recipe List</a></div>
+
+      </div>
+      <div class="span10">
+        <div ng-view></div>
+      </div>
+    </div>
+  </div>
+
+<!-- the following is my facebook stuff that I added from 
+    the web design mag aritcle on facebook.
+-->
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '858220220867353',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-like" data-href="http://vpi.test.engagency.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
+</body>
+</html>

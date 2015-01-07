@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Angular UI App</title>
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" media="screen" />
+    <link href="css/styles.css" rel="stylesheet" media="screen" />
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="scripts/directives/uiDirectives.js"></script>
+    <script src="scripts/modules/ui.js"></script>
+    <script src="scripts/myApp.js"></script>
+</head>
+<body data-ng-app="uiApp">
+    <section data-ng-controller="uiCtrl">
+        <h1>{{title}}</h1>
+        <!-- directive referenced using attribute -->
+        <div data-my-lightbox="lightboxObject">
+            <h2>{{lightboxText}}</h2>
+            <p>{{lightboxObject.text}}</p>
+        </div>
+        <button data-ng-click="lightboxObject.toggleView()">Show lightbox</button>
+
+        <div data-my-accordion>
+            <div data-my-item title="Accordion item 1">
+                <p>Some intro text to this accordion item</p>
+                <ul>
+                    <li>Bullet item 1</li>
+                    <li>Bullet item 2</li>
+                    <li>Another bullet item</li>
+                </ul>
+            </div>
+            <div data-my-item title="Accordion item 2">
+                <h3>A sub heading</h3>
+                <p>Some text for the second accordion</p>
+                <ol>
+                    <li>Numbered item 1</li>
+                    <li>Numbered item 2</li>
+                    <li>Another numbered item</li>
+                </ol>
+            </div>
+            <div data-my-item title="Accordion item 3">
+                <p>Some intro text to the last accordion item</p>
+                <ul>
+                    <li>Bullet item 1</li>
+                    <li>Bullet item 2</li>
+                    <li>Another bullet item</li>
+                </ul>
+            </div>
+            <div data-my-item title="Accordion item 4">
+                <p>Some intro text to the very last accordion item, that I added</p>
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Another item</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+function HelloController($scope) {
+  $scope.greeting = { text: 'Hello' };
+}
+
+function CartController($scope) {
+    $scope.quantity = 0;
+    $scope.items = [
+      { title: 'Paint pots', quantity: 8, price: 3.95 },
+      { title: 'Polka dots', quantity: 17, price: 12.95 },
+      { title: 'Pebbles', quantity: 5, price: 6.95 }
+    ];
+
+    $scope.add = function () {
+
+        $scope.items.push({ title: $scope.title, quantity: $scope.quantity, price: $scope.price });
+        $scope.title = "";
+        $scope.quantity = "";
+        $scope.price = "";
+
+        //console.log($scope);
+    };
+
+    $scope.remove = function (index) {
+        $scope.items.splice(index, 1);
+    };
+
+    console.log($scope.items);
+}

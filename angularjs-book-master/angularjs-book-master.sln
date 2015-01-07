@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angularjs-book-master", "http://localhost:57087", "{A1CB49DB-7D4A-4E4D-948C-544D75FCC00B}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57087"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\steve\source\AngularWork\angularjs-book-master\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57087\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57087"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\steve\source\AngularWork\angularjs-book-master\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57087\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\..\..\..\..\steve\source\AngularWork\angularjs-book-master\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1CB49DB-7D4A-4E4D-948C-544D75FCC00B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1CB49DB-7D4A-4E4D-948C-544D75FCC00B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

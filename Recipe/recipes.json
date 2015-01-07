@@ -1,0 +1,51 @@
+[
+        {
+            "id": "1",
+            "title": "Beans",
+            "description": "They are about the best beans\n that you can buy.",
+            "ingredients": [
+                {
+                    "amount": "1.85",
+                    "amountUnits": "packet",
+                    "ingredientName": "Kidney Light"
+                }
+            ],
+            "instructions": "A. Go buy some kidney beans.\n2. heat it up in an oven"
+        },
+        {
+            "id": "2",
+            "title": "Chicken Soup",
+            "description": "Fight the cold with this great recipe\n that you can buy.",
+            "ingredients": [
+                {
+                    "amount": "7.00",
+                    "amountUnits": "chicken",
+                    "ingredientName": "Chicken breast"
+                },
+                                {
+                    "amount": "3.00",
+                    "amountUnits": "chicken",
+                    "ingredientName": "Chicken broth"
+                }
+            ],
+            "instructions": "A. Go buy some kidney beans.\n2. heat it up in an oven"
+        },        
+        {
+            "id": "3",
+            "title": "Cookies",
+            "description": "They are about the best cookies\n that you can buy.",
+            "ingredients": [
+                {
+                    "amount": "2.85",
+                    "amountUnits": "carten",
+                    "ingredientName": "Milk"
+                },
+                {
+                    "amount": "5.23",
+                    "amountUnits": "packet",
+                    "ingredientName": "Chips Ahoy"
+                }
+            ],
+            "instructions": "1. Go buy some chips ahoy.\n2. heat it up in an oven"
+        }
+]
