@@ -58,31 +58,53 @@ app.controller('NewCtrl', function(MultiRecipeLoader, $scope, $location) {
   $scope.recipes = MultiRecipeLoader.query();
   console.log($scope.recipes);
   */
-  
-  $scope.save = function() {
-    $scope.recipes = MultiRecipeLoader.query();
-    console.log($scope.recipes.length);
-    var topID = $scope.recipes.length + 1;
-    $scope.recipes.push({
-      id: topID, 
-      title: $scope.recipe.title,
-      description: $scope.recipe.description, 
-      ingredients: $scope.recipe.ingredients,
-      instructions: $scope.recipe.instructions
-      });
-    console.log($scope.recipes);
+  $scope.recipe = new Recipes({
+    ingredients: [ {
+                    amount: '0.00',
+                    amountUnits: '',
+                    ingredientName: ''
+                } ]
+  });
+
+   $scope.save = function(recipe) {
+    //$scope.recipes = MultiRecipeLoader.query();
+    console.log($scope.recipes.then.length);
+    var topID = $scope.recipes.then.length + 1;
+    $scope.recipe = ({
+      id: topID,
+      title: recipe.title,
+      ingredients: [ {
+                    amount: '0.00',
+                    amountUnits: '',
+                    ingredientName: ''
+                } ],
+      description: recipe.description,
+      instructions: recipe.instructions
+    });
+    $scope.recipes.push(
+      recipe
+      );
+    //console.log($scope.recipes);
       /*
+ingredients: $scope.recipe.ingredients,
+*/
     $scope.recipe.$save(function(recipe) {
       $location.path('/view/' + recipe.id);
     });
-      */
+      
   };
 });
 
 app.controller('IngredientsCtrl', function($scope) {
-  $scope.addIngredient = function() {
-    var ingredients = $scope.recipe.ingredients;
-    ingredients[ingredients.length] = {};
+  $scope.addIngredient = function(recipe) {
+    //var ingredients = $scope.recipes.ingredients+1;
+    //ingredients[ingredients.length] = {};
+
+   recipe.ingredients.push([{
+                    amount: '0.00',
+                    amountUnits: '',
+                    ingredientName: ''
+                }]);
   };
 
   $scope.removeIngredient = function(index) {

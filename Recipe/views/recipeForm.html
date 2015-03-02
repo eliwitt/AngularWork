@@ -24,7 +24,7 @@
           <input ng-model="ingredient.ingredientName">
           <button type="button" class="btn btn-mini" ng-click="removeIngredient($index)"><i class="icon-minus-sign"></i> Delete </button>
         </li>
-        <button type="button" class="btn btn-mini" ng-click="addIngredient()"><i class="icon-plus-sign"></i> Add </button>
+        <button type="button" class="btn btn-mini" ng-click="addIngredient(recipe)"><i class="icon-plus-sign"></i> Add </button>
       </ul>
     </div>
   </div>
@@ -37,7 +37,7 @@
   </div>
 
   <div class="form-actions">
-    <button class="btn btn-primary" ng-disabled="recipeForm.$invalid">Save</button>
+    <button class="btn btn-primary" ng-disabled="recipeForm.$invalid" ng-click="save(recipe)">Save</button>
     <button type="button" ng-click="remove()" ng-show="!recipe.id" class="btn">Delete</button>
   </div>
 </form>
