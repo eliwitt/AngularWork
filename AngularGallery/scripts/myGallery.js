@@ -1,0 +1,1 @@
+﻿var myGallery = angular.module('galleryApp', ['gallery.directive','gallery.module']);
